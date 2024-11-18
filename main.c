@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+void main(){
 
     int qtd_categ; // quantidade de categorias
     scanf("%d", &qtd_categ);
@@ -41,6 +41,4 @@ int main(){
     for(int i = 0; i < qtd_categ; i++){
        free(histograma[i]);
     }
-    
-    return 0;
 }
