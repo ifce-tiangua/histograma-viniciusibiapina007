@@ -43,6 +43,5 @@ int main(){
        free(histograma[i]);
     }
     
-    
     return 0;
 }
