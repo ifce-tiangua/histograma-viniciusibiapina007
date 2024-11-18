@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void imprimir(char* his[], int vendas[], int qtd_categ);
+
 void main(){
 
     int qtd_categ; // quantidade de categorias
@@ -24,6 +26,15 @@ void main(){
         
     }
     
+    imprimir(histograma, vendas, qtd_categ);
+    
+    for(int i = 0; i < qtd_categ; i++){
+       free(histograma[i]);
+    }
+}
+
+void imprimir(char* his[], int vendas[], int qtd_categ){
+    
     for(int i = 0; i < qtd_categ; i++){
         
        if(vendas[i] == 0){
@@ -32,13 +43,11 @@ void main(){
        else{
            printf("%d ", vendas[i]);
            for(int j = 0; j < vendas[i]; j++){
-                printf("%c", histograma[i][j]);
+                printf("%c", his[i][j]);
            }
            printf("\n");
        }
     }
     
-    for(int i = 0; i < qtd_categ; i++){
-       free(histograma[i]);
-    }
+    
 }
