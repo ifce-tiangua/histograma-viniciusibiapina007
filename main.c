@@ -26,14 +26,14 @@ void main(){
         
     }
     
-    imprimir(histograma, vendas, qtd_categ);
+    imprime_histograma(histograma, vendas, qtd_categ);
     
     for(int i = 0; i < qtd_categ; i++){
        free(histograma[i]);
     }
 }
 
-void imprime_histogrma(char* his[], int vendas[], int qtd_categ){
+void imprime_histograma(char* his[], int vendas[], int qtd_categ){
     
     for(int i = 0; i < qtd_categ; i++){
         
