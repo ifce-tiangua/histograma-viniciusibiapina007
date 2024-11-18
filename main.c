@@ -7,7 +7,7 @@ int main(){
     scanf("%d", &qtd_categ);
     
     int vendas[qtd_categ]; //valor das vendas em cada categoria
-    char* histograma[qtd_categ]; // vetor com os ponteiros
+    char* histograma[qtd_categ]; // vetor com os ponteiros para char
     
     for(int i = 0; i < qtd_categ; i++){
         
