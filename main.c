@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void imprimir(char* his[], int vendas[], int qtd_categ);
+void imprime_histograma(char* his[], int vendas[], int qtd_categ);
 
 void main(){
 
@@ -33,7 +33,7 @@ void main(){
     }
 }
 
-void imprimir(char* his[], int vendas[], int qtd_categ){
+void imprime_histogrma(char* his[], int vendas[], int qtd_categ){
     
     for(int i = 0; i < qtd_categ; i++){
         
