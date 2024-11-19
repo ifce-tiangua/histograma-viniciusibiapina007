@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 void imprime_histograma(char* his[], int vendas[], int qtd_categ);
+void preenche(char* his[], int tam_venda, int categoria);
 
 void main(){
 
@@ -20,10 +21,8 @@ void main(){
         else
             histograma[i] = (char*) malloc(vendas[i] * sizeof(char));
             
-            for(int j = 0; j < vendas[i]; j++){
-                histograma[i][j] = '*';
-            }
-        
+            preenche(histograma, vendas[i], i);
+            
     }
     
     imprime_histograma(histograma, vendas, qtd_categ);
@@ -31,6 +30,14 @@ void main(){
     for(int i = 0; i < qtd_categ; i++){
        free(histograma[i]);
     }
+}
+
+void preenche(char* his[], int tam_venda, int categoria){
+    
+    for(int j = 0; j< tam_venda; j++){
+        his[categoria][j] = '*'; 
+    }
+    
 }
 
 void imprime_histograma(char* his[], int vendas[], int qtd_categ){
