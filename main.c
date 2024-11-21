@@ -24,8 +24,14 @@ void main(){
             preenche(histograma, vendas[i], i);
             
     }
+
+    if(qtd_categ == 0){
+        printf("vazio");
+    }
+    else{
+        imprime_histograma(histograma, vendas, qtd_categ);
+    }
     
-    imprime_histograma(histograma, vendas, qtd_categ);
     
     for(int i = 0; i < qtd_categ; i++){
        free(histograma[i]);
